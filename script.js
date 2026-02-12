@@ -74,7 +74,8 @@ window.addEventListener("load", function(){
     const preloader = document.querySelector(".preloader");
     setTimeout(() => {
         preloader.classList.add("hide");
-    }, 1000); // 1 second delay for smooth effect
+    }, 2000); // 1 second delay for smooth effect
 });
+
 
 
