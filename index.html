@@ -651,8 +651,17 @@ whoTabs.forEach(tab=>{
 });
 </script>
 
+<script>
+    window.addEventListener("load", function(){
+    const preloader = document.querySelector(".preloader");
+    setTimeout(() => {
+        preloader.classList.add("hide");
+    }, 2000); // 1 second delay for smooth effect
+});
+</script>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
