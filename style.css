@@ -2004,3 +2004,82 @@ html, body {
     transform: scale(1);
 }
 
+/* ===============================
+   MODERN REAL ESTATE PRELOADER
+=================================*/
+
+.preloader{
+    position:fixed;
+    inset:0;
+    background:#0b1023;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999999;
+    transition:opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader-wrapper{
+    text-align:center;
+}
+
+.loader-wrapper h3{
+    color:#fff;
+    margin-top:25px;
+    letter-spacing:2px;
+    font-weight:500;
+}
+
+/* Building Animation */
+.building-loader{
+    display:flex;
+    gap:8px;
+    align-items:flex-end;
+    justify-content:center;
+    height:60px;
+}
+
+.building-loader span{
+    width:12px;
+    background:#f4c909;
+    border-radius:4px;
+    animation:building 1.2s infinite ease-in-out;
+}
+
+/* Different heights + delay */
+.building-loader span:nth-child(1){
+    height:30px;
+    animation-delay:0s;
+}
+.building-loader span:nth-child(2){
+    height:50px;
+    animation-delay:0.2s;
+}
+.building-loader span:nth-child(3){
+    height:40px;
+    animation-delay:0.4s;
+}
+.building-loader span:nth-child(4){
+    height:60px;
+    animation-delay:0.6s;
+}
+
+@keyframes building{
+    0%,100%{
+        transform:scaleY(1);
+        opacity:0.6;
+    }
+    50%{
+        transform:scaleY(1.5);
+        opacity:1;
+    }
+}
+
+/* Hide Preloader */
+.preloader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+
+
